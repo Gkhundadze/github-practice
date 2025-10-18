@@ -3,3 +3,89 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --color-primary:purple;
+    --color-secondary: orange;
+    --color-white: #ffffff;
+
+
+
+
+    --review-offset: 50px;
+}
+
+
+
+/* general classes START */
+
+
+
+
+.flex {
+    display: flex;
+}
+.align-center {
+    align-items: center;
+}
+.fl-basis-50 {
+    flex-basis: 50%;
+}
+/* general classes END */
+
+
+section {
+
+padding: 2rem;
+
+
+& .content {
+    & h1 {
+        color: var(--color-primary);
+        margin-bottom: 1rem;
+        font-size: 48px;
+        max-width: 280px;
+    }
+    & p {
+        max-width: 400px;
+
+    }
+}
+
+
+
+
+
+& .review {
+
+
+
+    & .single-review {
+        border: 1px solid var(--color-primary);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        width: fit-content;
+        gap: var(--review-offset);
+        & .stars {
+            gap: 5px;
+        }
+    }
+}
+
+}
+
+
+.single-review:nth-child(2) {
+    margin-left: var(--review-offset);
+}
+.single-review:nth-child(3) {
+    margin-left: calc(var(--review-offset) * 2);
+}
+
+
+
+
+
+.single-review:not(:last-child) {
+    margin-bottom: 20px;    
+}
